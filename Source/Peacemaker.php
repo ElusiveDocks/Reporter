@@ -2,7 +2,11 @@
 
 namespace ElusiveDocks\Peacemaker\Source;
 
-use ElusiveDocks\Peacemaker\Source\Handler\GenericHandler;
+use ElusiveDocks\Peacemaker\Contract\HandlerInterface;
+use ElusiveDocks\Peacemaker\Source\Handler\HtmlHandler;
+use ElusiveDocks\Peacemaker\Source\Handler\JsonHandler;
+use ElusiveDocks\Peacemaker\Source\Handler\TextHandler;
+use ElusiveDocks\Peacemaker\Source\Reporter\GenericReporter;
 
 /**
  * Class Peacemaker
@@ -23,24 +27,27 @@ class Peacemaker
     }
 
     /**
+     * @param null|HandlerInterface $handler
      * @return Peacemaker
      */
-    public static function enableHandler()
+    public static function enableHandler(HandlerInterface $handler = null)
     {
-        self::useSingleton()->registerHandler();
+        if ($handler === null) {
+            $handler = self::useSelf()->createTextHandler();
+        }
+
+        self::useSingleton()->pushHandler($handler);
+        self::useSingleton()->registerReporter();
 
         return self::useSelf();
     }
 
     /**
-     * @return GenericHandler
+     * @return TextHandler
      */
-    private static function useSingleton()
+    public static function createTextHandler()
     {
-        if (self::$Singleton === null) {
-            self::$Singleton = new GenericHandler();
-        }
-        return self::$Singleton;
+        return new TextHandler();
     }
 
     /**
@@ -52,5 +59,32 @@ class Peacemaker
             self::$Self = new self;
         }
         return self::$Self;
+    }
+
+    /**
+     * @return GenericReporter
+     */
+    private static function useSingleton()
+    {
+        if (self::$Singleton === null) {
+            self::$Singleton = new GenericReporter();
+        }
+        return self::$Singleton;
+    }
+
+    /**
+     * @return HtmlHandler
+     */
+    public static function createHtmlHandler()
+    {
+        return new HtmlHandler();
+    }
+
+    /**
+     * @return JsonHandler
+     */
+    public static function createJsonHandler()
+    {
+        return new JsonHandler();
     }
 }

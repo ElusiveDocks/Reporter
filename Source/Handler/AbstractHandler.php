@@ -2,30 +2,31 @@
 
 namespace ElusiveDocks\Peacemaker\Source\Handler;
 
-use Whoops\Run;
+use ElusiveDocks\Peacemaker\Contract\HandlerInterface;
+use Whoops\Handler\HandlerInterface as ServiceProviderInterface;
 
 /**
  * Class AbstractHandler
  * @package ElusiveDocks\Peacemaker\Source\Handler
  */
-abstract class AbstractHandler
+abstract class AbstractHandler implements HandlerInterface
 {
-    /** @var null|Run $ServiceProviderAdapter */
+    /** @var null|ServiceProviderInterface $ServiceProviderAdapter */
     private $ServiceProviderAdapter = null;
 
     /**
-     * @return null|Run
+     * @return null|ServiceProviderInterface
      */
-    public function getServiceProviderAdapter(): ?Run
+    public function getServiceProviderAdapter(): ?ServiceProviderInterface
     {
         return $this->ServiceProviderAdapter;
     }
 
     /**
-     * @param Run|null $ServiceProviderAdapter
+     * @param ServiceProviderInterface|null $ServiceProviderAdapter
      * @return AbstractHandler
      */
-    public function setServiceProviderAdapter(?Run $ServiceProviderAdapter): AbstractHandler
+    public function setServiceProviderAdapter(?ServiceProviderInterface $ServiceProviderAdapter): AbstractHandler
     {
         $this->ServiceProviderAdapter = $ServiceProviderAdapter;
         return $this;
