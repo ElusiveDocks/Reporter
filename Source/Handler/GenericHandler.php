@@ -2,6 +2,8 @@
 
 namespace ElusiveDocks\Peacemaker\Source\Handler;
 
+use Whoops\Run;
+
 /**
  * Class GenericHandler
  * @package ElusiveDocks\Peacemaker\Source\Handler
@@ -13,8 +15,8 @@ class GenericHandler extends AbstractHandler
      */
     public function __construct()
     {
-        $this->getServiceProviderAdapter()->pushHandler(
-            new \Whoops\Handler\PrettyPageHandler
+        $this->setServiceProviderAdapter(
+            new Run()
         );
     }
 
@@ -23,6 +25,10 @@ class GenericHandler extends AbstractHandler
      */
     public function registerHandler()
     {
+        $this->getServiceProviderAdapter()->pushHandler(
+            new \Whoops\Handler\PrettyPageHandler
+        );
+
         $this->getServiceProviderAdapter()->register();
         return $this;
     }
