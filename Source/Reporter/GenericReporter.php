@@ -1,13 +1,13 @@
 <?php
 
-namespace ElusiveDocks\Peacemaker\Source\Reporter;
+namespace ElusiveDocks\Reporter\Source\Reporter;
 
-use ElusiveDocks\Peacemaker\Contract\HandlerInterface;
+use ElusiveDocks\Reporter\Contract\HandlerInterface;
 use Whoops\Run;
 
 /**
  * Class GenericReporter
- * @package ElusiveDocks\Peacemaker\Source\Reporter
+ * @package ElusiveDocks\Reporter\Source\Reporter
  */
 class GenericReporter extends AbstractReporter
 {

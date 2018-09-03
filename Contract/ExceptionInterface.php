@@ -1,10 +1,10 @@
 <?php
 
-namespace ElusiveDocks\Peacemaker\Contract;
+namespace ElusiveDocks\Reporter\Contract;
 
 /**
  * Interface ExceptionInterface
- * @package ElusiveDocks\Peacemaker\Contract
+ * @package ElusiveDocks\Reporter\Contract
  */
 interface ExceptionInterface extends \Throwable
 {

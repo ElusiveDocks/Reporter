@@ -1,13 +1,13 @@
 <?php
 
-namespace ElusiveDocks\Peacemaker\Source\Handler;
+namespace ElusiveDocks\Reporter\Source\Handler;
 
-use ElusiveDocks\Peacemaker\Contract\HandlerInterface;
+use ElusiveDocks\Reporter\Contract\HandlerInterface;
 use Whoops\Handler\JsonResponseHandler;
 
 /**
  * Class JsonHandler
- * @package ElusiveDocks\Peacemaker\Source\Handler
+ * @package ElusiveDocks\Reporter\Source\Handler
  */
 class JsonHandler extends AbstractHandler implements HandlerInterface
 {

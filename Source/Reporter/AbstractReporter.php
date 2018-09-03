@@ -1,12 +1,12 @@
 <?php
 
-namespace ElusiveDocks\Peacemaker\Source\Reporter;
+namespace ElusiveDocks\Reporter\Source\Reporter;
 
 use Whoops\Run;
 
 /**
  * Class AbstractReporter
- * @package ElusiveDocks\Peacemaker\Source\Reporter
+ * @package ElusiveDocks\Reporter\Source\Reporter
  */
 abstract class AbstractReporter
 {

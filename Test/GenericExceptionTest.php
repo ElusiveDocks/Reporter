@@ -1,13 +1,13 @@
 <?php
 
-namespace ElusiveDocks\Peacemaker\Test;
+namespace ElusiveDocks\Reporter\Test;
 
-use ElusiveDocks\Peacemaker\Exception\GenericException;
+use ElusiveDocks\Reporter\Exception\GenericException;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class GenericExceptionTest
- * @package ElusiveDocks\Peacemaker\Test\Exception
+ * @package ElusiveDocks\Reporter\Test\Exception
  */
 class GenericExceptionTest extends TestCase
 {

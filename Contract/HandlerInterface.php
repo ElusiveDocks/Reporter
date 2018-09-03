@@ -1,10 +1,10 @@
 <?php
 
-namespace ElusiveDocks\Peacemaker\Contract;
+namespace ElusiveDocks\Reporter\Contract;
 
 /**
  * Interface HandlerInterface
- * @package ElusiveDocks\Peacemaker\Contract
+ * @package ElusiveDocks\Reporter\Contract
  */
 interface HandlerInterface
 {

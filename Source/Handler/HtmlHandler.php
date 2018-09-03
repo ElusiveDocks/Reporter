@@ -1,13 +1,13 @@
 <?php
 
-namespace ElusiveDocks\Peacemaker\Source\Handler;
+namespace ElusiveDocks\Reporter\Source\Handler;
 
-use ElusiveDocks\Peacemaker\Contract\HandlerInterface;
+use ElusiveDocks\Reporter\Contract\HandlerInterface;
 use Whoops\Handler\PrettyPageHandler;
 
 /**
  * Class HtmlHandler
- * @package ElusiveDocks\Peacemaker\Source\Handler
+ * @package ElusiveDocks\Reporter\Source\Handler
  */
 class HtmlHandler extends AbstractHandler implements HandlerInterface
 {

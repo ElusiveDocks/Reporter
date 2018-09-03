@@ -1,5 +1,5 @@
 {
-    "name": "elusivedocks/peacemaker",
+    "name": "elusivedocks/reporter",
     "description": "indescribable",
     "minimum-stability": "stable",
     "prefer-stable": true,
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ElusiveDocks\\Peacemaker\\": "\\"
+            "ElusiveDocks\\Reporter\\": "\\"
         }
     },
     "require-dev": {

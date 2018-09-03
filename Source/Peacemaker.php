@@ -1,24 +1,24 @@
 <?php
 
-namespace ElusiveDocks\Peacemaker\Source;
+namespace ElusiveDocks\Reporter\Source;
 
-use ElusiveDocks\Peacemaker\Contract\HandlerInterface;
-use ElusiveDocks\Peacemaker\Source\Handler\HtmlHandler;
-use ElusiveDocks\Peacemaker\Source\Handler\JsonHandler;
-use ElusiveDocks\Peacemaker\Source\Handler\TextHandler;
-use ElusiveDocks\Peacemaker\Source\Reporter\GenericReporter;
+use ElusiveDocks\Reporter\Contract\HandlerInterface;
+use ElusiveDocks\Reporter\Source\Handler\HtmlHandler;
+use ElusiveDocks\Reporter\Source\Handler\JsonHandler;
+use ElusiveDocks\Reporter\Source\Handler\TextHandler;
+use ElusiveDocks\Reporter\Source\Reporter\GenericReporter;
 
 /**
- * Class Peacemaker
- * @package ElusiveDocks\Peacemaker\Source
+ * Class Reporter
+ * @package ElusiveDocks\Reporter\Source
  */
-class Peacemaker
+class Reporter
 {
     private static $Self = null;
     private static $Singleton = null;
 
     /**
-     * Peacemaker constructor.
+     * Reporter constructor.
      */
     final private function __construct()
     {
@@ -28,7 +28,7 @@ class Peacemaker
 
     /**
      * @param null|HandlerInterface $handler
-     * @return Peacemaker
+     * @return Reporter
      */
     public static function enableHandler(HandlerInterface $handler = null)
     {
@@ -51,7 +51,7 @@ class Peacemaker
     }
 
     /**
-     * @return Peacemaker
+     * @return Reporter
      */
     private static function useSelf()
     {

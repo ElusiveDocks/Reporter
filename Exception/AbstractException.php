@@ -1,12 +1,12 @@
 <?php
 
-namespace ElusiveDocks\Peacemaker\Exception;
+namespace ElusiveDocks\Reporter\Exception;
 
-use ElusiveDocks\Peacemaker\Contract\ExceptionInterface;
+use ElusiveDocks\Reporter\Contract\ExceptionInterface;
 
 /**
  * Class AbstractException
- * @package ElusiveDocks\Peacemaker\Exception
+ * @package ElusiveDocks\Reporter\Exception
  */
 abstract class AbstractException extends \Exception implements ExceptionInterface
 {

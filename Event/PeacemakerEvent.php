@@ -1,12 +1,12 @@
 <?php
 
-namespace ElusiveDocks\Peacemaker\Event;
+namespace ElusiveDocks\Reporter\Event;
 
 /**
- * Interface PeacemakerEvent
- * @package ElusiveDocks\Peacemaker\Event
+ * Interface ReporterEvent
+ * @package ElusiveDocks\Reporter\Event
  */
-interface PeacemakerEvent
+interface ReporterEvent
 {
 
 }
